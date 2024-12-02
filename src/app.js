@@ -1,6 +1,7 @@
 import express from 'express';
 import morgan from 'morgan';
 import logger from './utils/logger.js';
+import router from './routes/routes.js';
 
 export const app = express();
 
@@ -22,3 +23,5 @@ if (process.env.NODE_ENV != 'production') {
         }),
     );
 }
+
+app.use('/', router);
