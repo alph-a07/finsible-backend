@@ -5,9 +5,9 @@
     "type": "module",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "nodemon ./src/index.js --env_file=.env.local",
-        "start:prod": "NODE_ENV=production node ./src/index.js --env_file=.env",
-        "debug": "node --inspect ./src/index.js --env_file=.env"
+        "start": "nodemon --env-file=.env.local ./src/index.js",
+        "start:prod": "node NODE_ENV=production --env-file=.env ./src/index.js",
+        "debug": "node --inspect --env-file=.env.local ./src/index.js"
     },
     "author": "",
     "description": "Backend server for Finsible android application.",
