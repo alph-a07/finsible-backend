@@ -47,6 +47,7 @@ const loginUser = async (req, res) => {
       picture,
       accountCreated: user.accountCreated,
       jwt: sessionToken,
+      message: 'Token validated',
     });
   } catch (error) {
     logger.error(error);
